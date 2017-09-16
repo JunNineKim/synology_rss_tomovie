@@ -2,7 +2,7 @@
   - 시놀로지 다운로드 스테이션용 TOMOVIE 사이트 RSS.
   - RSS로 Download하는 파일의 중복 Download를 방지한다.
     Synology 에 Maria DB를 설치하여 Table에 저장관리.
-  - RSS Feeds에 등록 예시.
+  - RSS Feeds에 등록 예시.(받고자 하는 영상의 제목에 문화공간이 있을 경우) 
   - http://localhost/rss/rss_tomovie.php?k=문화공간+720p-NEXT
     
 # 설치순서
