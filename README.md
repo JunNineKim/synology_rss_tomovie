@@ -2,7 +2,8 @@
   - 시놀로지 다운로드 스테이션용 TOMOVIE 사이트 RSS.
   - RSS로 Download하는 파일의 중복 Download를 방지한다.
     Synology 에 Maria DB를 설치하여 Table에 저장관리.
-  
+  - RSS Feeds에 등록 예시.
+  - http://localhost/rss/rss_tomovie.php?k=썰전+720p-NEXT
     
 # 설치순서
   1. RSS Schedule을 중지합니다.
