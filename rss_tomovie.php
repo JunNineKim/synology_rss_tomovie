@@ -430,10 +430,6 @@ class SynoRSSTOMOVIE {
         return $rss;
     }
 }
-// sudo chown -R DownloadStation:DownloadStation /tmp/rss_tomovie.log
-// sudo chmod -R 777  /tmp/rss_tomovie.log
-// sudo chown -R DownloadStation:DownloadStation /volume1/web/rss/rss_tomovie.php
-// sudo chmod 777  /volume1/web/rss/rss_tomovie.php
 $k=$_GET["k"];
 $multi = new SynoRSSTOMOVIE;
 $txt = $multi->prepare(null,$k);
