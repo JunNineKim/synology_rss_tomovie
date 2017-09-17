@@ -41,7 +41,7 @@ class SynoRSSTOMOVIE {
     private $return_one_row_min = 3; //Query 검색한 결과가 Table에 저장되어 있을 때 RSS파일로 등록하려고 할 경우 "비어있거나 올바르지 않다" 
 	                                 //또는 "rss file is empty or invalid."란 메세지가 뜬다.
                                      //이를위해 기존 검색후 $return_one_row_min 정의한 값보다 작을 경우 첫번째 레코드의 경우 Dispaly되게 한다.
-    private $DB_debug       = true;//false true
+    private $DB_debug       = true;//false true DB를 이용하여 중복체크를 할 지 하지 않을지 결정한다.
     public  $Chk_Exists_in_DB = true;//false true //query값이 기존 저장된 Table에 존재하는가를 check할지 하지 않을지 결정한다.
     public  $cnt_returned_record = 0;//Query값이 기존 Table에 몆개의 레코드가 있는지를 반환한다.
     public  $max_returned_datetime = '';//Query값을 기준으로 기존 Table에 가장 큰 시간레코드를 반환한다.
@@ -351,7 +351,12 @@ class SynoRSSTOMOVIE {
             $category="Unknown category";
             //DB Data Check
             if ($this->Chk_Exists_in_DB==true) {
-                $this->DB_Connect();
+                $connection_status = $this->DB_Connect();
+                $this->db_logger('connection_status',$connection_status);
+                $this->DebugLog("Connection Status: $connection_status ");
+                if (!$connection_status) {
+                    die('MySQL Connection Failed.');
+                }
                 $cnt_query_in_db = $this->check_query_in_db($this->query_value);
                 $this->db_logger('Count query in db',$cnt_query_in_db);
                 $this->DebugLog("Count query in db: $cnt_query_in_db ");
