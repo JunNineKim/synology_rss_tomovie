@@ -30,7 +30,13 @@ url: https://JunNineKim.github.io/synology_rss_tomovie/
 # Use rdiscount as the markdown engine because it generates html5 compliant code for stuff like footnotes
 # If you use maroku (default engine) some of your generated pages may not validate or lint as html5
 # If you don't have it install it via gem install rdiscount
-markdown: rdiscount
+# markdown: rdiscount
+
+# The page build completed successfully, but returned the following warning for the `master` branch:
+# You are currently using the 'rdiscount' Markdown engine, which is no longer supported by GitHub Pages and may cease working at any time. To ensure your site continues to build, remove the 'markdown' setting in your site's '_config.yml' file and confirm your site renders as expected. For more information, see https://help.github.com/articles/updating-your-markdown-processor-to-kramdown/.
+# For information on troubleshooting Jekyll see:
+#   https://help.github.com/articles/troubleshooting-jekyll-builds
+# If you have any questions you can contact us by replying to this email.
 
 # Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
 permalink: pretty
