@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://JunNineKim.github.io/sitemap.xml
+Sitemap: https://JunNineKim.github.io/synology_rss_tomovie/sitemap.xml
