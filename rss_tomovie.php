@@ -153,7 +153,7 @@ class SynoRSSTOMOVIE {
         $stripTitle = preg_replace("/[ #\&\+\-%@=\/\\\:;,\.'\"\^`~\_|\!\?\*$#()\[\]\{\}]/", "", $title);
 		//신규 Torrent 이고 Delay시간 zero일 경우 다운 준비 처리. 
         if ( $this->stay_some_hr == 0 and empty($action) ) {
-            $action = "PENDING";
+            $action = "DELAYED";
             $query = "insert into rss_torrent (title, hash, action, chk_date,reg_date) values('$stripTitle', '$hash', 'PENDING', now(),now())";
             mysql_query($query);
         }        
